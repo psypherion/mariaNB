@@ -1,34 +1,38 @@
 """
-Marianb: Jupyter Notebook Extension for MariaDB
+Marianb: Jupyter Notebook Extension for MariaDB - HACKATHON VERSION
 """
 
 __version__ = "0.1.0"
-__author__ = "Your Name"
+__author__ = "Hackathon Hero"
 
 from .magic import MariaDBMagics
 from .connection import ConnectionManager
 from .dataframe import DataFrameConverter, DataFrameAccessor
 from .vector import VectorUtils
 
-# Make the extension loadable
 def load_ipython_extension(ipython):
     """Load the Marianb extension in Jupyter"""
-    print("🚀 Loading Marianb - MariaDB Jupyter Extension v0.1.0")
+    print("🚀 Loading Marianb - MariaDB Hackathon Edition v0.1.0")
     
     # Register the magic commands
     magics = MariaDBMagics(shell=ipython)
-    ipython.register_magic_function(magics.mariadb, 'line_cell')
+    
+    # Register line magic as 'mariadb'
+    ipython.register_magic_function(magics.mariadb_line, 'line', 'mariadb')
+    
+    # Register cell magic as 'mariadb'
+    ipython.register_magic_function(magics.mariadb_cell, 'cell', 'mariadb')
     
     print("✅ Marianb loaded successfully!")
-    print("   Use %mariadb for single-line queries")
-    print("   Use %%mariadb for multi-line queries") 
-    print("   Example: %mariadb SELECT VERSION()")
+    print("   📝 Use %mariadb for single-line queries")
+    print("   📄 Use %%mariadb for multi-line queries") 
+    print("   🎯 Example: %mariadb SELECT VERSION()")
+    print("   🏆 Ready for MariaDB Hackathon!")
 
 def unload_ipython_extension(ipython):
     """Unload the extension"""
-    print("👋 Marianb extension unloaded")
+    print("👋 Marianb hackathon edition unloaded")
 
-# Expose main classes for direct import
 __all__ = [
     'MariaDBMagics',
     'ConnectionManager', 
