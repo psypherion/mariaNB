@@ -1,0 +1,37 @@
+# Core MariaDB connectivity
+mariadb
+# mariadb-connector-python
+
+# Jupyter and IPython integration
+IPython
+jupyter
+notebook
+jupyterlab
+
+# Data manipulation and analysis
+pandas
+numpy
+
+# SQL parsing and formatting
+sqlparse
+
+# Visualization
+matplotlib
+seaborn
+
+# Configuration and utilities
+pyyaml
+python-dotenv
+click
+
+# Type hints and validation
+typing-extensions
+pydantic
+
+# Vector operations (optional but recommended)
+scikit-learn
+scipy
+
+# Async support for advanced features
+asyncio-pool
+aiofiles

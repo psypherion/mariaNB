@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "marianb"
+version = "0.1.0"
+description = "Jupyter Notebook Extension for MariaDB with SQL magics, DataFrame integration, and vector search"
+authors = [{name = "Your Name", email = "your.email@example.com"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "mariadb>=1.1.0",
+    "pandas>=1.5.0",
+    "IPython>=7.0.0",
+    "jupyter>=1.0.0",
+    "matplotlib>=3.5.0",
+    "numpy>=1.21.0",
+    "sqlparse>=0.4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/marianb"
+Repository = "https://github.com/yourusername/marianb"
+Documentation = "https://marianb.readthedocs.io"
