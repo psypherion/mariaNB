@@ -3,7 +3,7 @@ Marianb: Jupyter Notebook Extension for MariaDB - HACKATHON VERSION
 """
 
 __version__ = "0.1.0"
-__author__ = "Hackathon Hero"
+__author__ = "@psypherion"
 
 from .magic import MariaDBMagics
 from .connection import ConnectionManager
